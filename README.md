@@ -4,7 +4,7 @@
 
 This document describes my progress, contributions and reflection of the OrthoEyes 2020 project, as well as background information about the project.
 
-# Table of Contents <!-- omit in toc -->
+# <a id="table-of-contents"></a>Table of Contents <!-- omit in toc -->
 - [Obligatory Criteria](#obligatory-criteria)
   - [Datacamp assignments](#datacamp-assignments)
   - [Personal Reflection](#personal-reflection)
@@ -73,11 +73,9 @@ This document describes my progress, contributions and reflection of the OrthoEy
 
 [Back to Table of Contents](#table-of-contents)
 ## Personal Reflection
-### <a id="p-situation"></a>Situation <!-- omit in toc -->
 When I started with the project, part of the group was already a week in. This was due to me joining the group at a later time because there was a participation spot that came free when I started the other minor I was signed in for. This wasn't really a problem though, because I could easily catch up with the rest of the group.
 
-### <a id="p-task"></a>Task <!-- omit in toc -->
-We did have specific roles in some cases. Donna, for example, acted as communicator with the minor organisation and external parties. I didn't really have such a specific role in the group. I did act like a 'back-end engineer' together with Danny. Together we did most of the coding for the [convenience library](code/lib/ortho_lib.py) we put together. I also already had some experience in machine learning and neural networks, so at times (mostly at the beginning) I could provide some extra information when it was needed. We worked in a free form of agile development from week 3 or 4 on, so we divided tasks at the start of the week, and we just carried them out.
+I didn't really have such a specific role in the group. I did act like a 'back-end engineer' together with Danny. Together we did most of the coding for the [convenience library](code/lib/ortho_lib.py) we put together. I also already had some experience in machine learning and neural networks, so at times (mostly at the beginning) I could provide some extra information when it was needed. We worked in a free form of agile development from week 3 or 4 on, so we divided tasks at the start of the week, and we just carried them out.
 
 Other tasks I worked on:
 - [A lot of visualization during the project]()
@@ -89,8 +87,12 @@ Other tasks I worked on:
 - [Constructing the final experiment and results](notebooks/final_experiment.ipynb)
 - [Writing, but mostly reviewing, the paper](#paper)
 
+
+### <a id="p-situation"></a>Situation <!-- omit in toc -->
+
+### <a id="p-task"></a>Task <!-- omit in toc -->
+
 ### <a id="p-action"></a>Action <!-- omit in toc -->
-As stated [above](#p-task), I acted as a back-end engineer. So I tried to put together code as convient as possible for the group to work with. Sometimes, when I was working on some changes, the notebooks of others broke. I think I should have done this a little different, as most of the time the notebooks didn't have to fail, it was just a syntax error or some other small thing. 
 
 ### <a id="p-results"></a>Results <!-- omit in toc -->
 
@@ -213,9 +215,9 @@ The model outperforms AdaBoost, bagging and SVC in identifying patients/non-pati
 
 |                  |     OR-ensemble     f=1.7    |     AdaBoost    |     Random Forest    |     Bagging    |     SVC     |
 |------------------|------------------------------|-----------------|----------------------|----------------|-------------|
-|     Precision    |     0.9                      |     0.74        |     0.96             |     0.8        |     0.87    |
-|     Recall       |     0.95                     |     0.76        |     0.96             |     0.88       |     0.88    |
-|     Accuracy     |     0.88                     |     0.76        |     0.96             |     0.88       |     0.88    |
+|     Precision    |     0.9                      |     0.74        |     0.93             |     0.8        |     0.87    |
+|     Recall       |     0.95                     |     0.76        |     0.92             |     0.88       |     0.88    |
+|     Accuracy     |     0.88                     |     0.76        |     0.91             |     0.88       |     0.88    |
 
 </details>
 <details>
@@ -243,9 +245,7 @@ Some tasks in the Trello board had deadlines, to make sure these tasks were carr
 
 <details>
 <summary>Trello board screenshot</summary>
-
 <img src="img/trello.png" />
-
 </details>
 
 [Back to Table of Contents](#table-of-contents)
