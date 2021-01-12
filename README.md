@@ -20,6 +20,7 @@ This document describes my progress, contributions and reflection of the OrthoEy
   - [Final OR-ensemble experiments](#final-or-ensemble-experiments)
 - [3. Domain Knowledge](#3-domain-knowledge)
   - [Literature](#literature)
+  - [Terminology](#terminology)
 - [4. Data Preprocessing](#4-data-preprocessing)
   - [Exploring and explanation of the dataset](#exploring-and-explanation-of-the-dataset)
   - [Exploring and explanation of existing code](#exploring-and-explanation-of-existing-code)
@@ -130,19 +131,32 @@ I was really struggling when I was extracting models from the library at first. 
 ## Evaluation of the group project
 In my personal opinion, this was the nicest project team I've ever been part of. Every member of the team was able give their opinion and was also able to react in an adult way. We did have our differences from time to time, maybe because our group is a mix of multiple disciplines. When we came accross a conflict, it was address right way or at the weekly retrospective.
 
-I can be a little *direct* at times, especially when I want to be right and I'm sure I'm right. This can sometimes result people thinking I'm angry or something like that, which is never my intention. I've had some conflicts with some of the group members regarding this fact. The nice thing is that they were not scared to share their opinion or to address their experience. I can really appreciate this, because I can then correct my own behaviour. 
+I can be a *little direct* at times, especially when I want to be right and I'm sure I'm right. This can sometimes result people thinking I'm angry or something like that, which is never my intention. I've had some conflicts with some of the group members regarding this fact. The nice thing is that they were not scared to share their opinion or to address their experience. I can really appreciate this, because I can then correct my own behaviour. 
 
 The group had some really hard workers, with great work mentality. At times I felt a little inadequate in this aspect. But these hard workers were also very able to motivate me in the same way. I think I worked harder because I saw them work hard.
 
 At the start of the project we worked at the THUAS on wednesdays. Later, because of the new measures for the pandemic, we had to cancel this. In stead we decided to meet (almost) all day in the Teams chat. I think whis helped a lot at keeping up with the work, because I tend to slack off when I work on my own.
 
-To conclude, I'm very happy with the way our team communicated and worked together. 
+Overall, I'm very happy with the way our team communicated and worked together. 
 
-### Situation <!-- omit in toc -->
-### Task <!-- omit in toc -->
-### Action <!-- omit in toc -->
-### Results <!-- omit in toc -->
-### Reflection <!-- omit in toc -->
+Here I will reflect on a situation using STARR:
+### **** <!-- omit in toc -->
+
+#### Situation <!-- omit in toc -->
+
+
+#### Task <!-- omit in toc -->
+
+
+#### Action <!-- omit in toc -->
+
+
+#### Results <!-- omit in toc -->
+
+
+#### Reflection <!-- omit in toc -->
+
+
 
 [Back to Table of Contents](#table-of-contents)
 # 1. The Project
@@ -423,6 +437,21 @@ I also read the following papers to gain more knowledge on this specific domain 
 And the following articles:
  - [A 2019 guide to 3D Human Pose Estimation](https://nanonets.com/blog/human-pose-estimation-3d-guide/)
 
+## Terminology
+<details>
+<summary>
+In the project there are some terms and jargon that might need to be explained:
+</summary>
+
+- OR-ensemble
+
+    The novel ensemble method explored in this project. Combines multiple binary machine learning models using a Boolean OR-operation.
+
+- `ortho_lib`
+
+    The library our team compiled from old code and made additions and modification to to accomodate the needs of the project.
+</details>
+
 [Back to Table of Contents](#table-of-contents)
 # 4. Data Preprocessing
 Because the project has had several iterations, there was already a lot of work done with the data, including some code which made it a little more convenient to work with our dataset.
@@ -490,19 +519,27 @@ When we started, I wrote a guide for the rest of the group to understand the cla
 Below I describe visualizations for the data that may or may not be included in the library.
 
 #### **Animated visualization of an individual** <!-- omit in toc -->
+[Notebook](notebooks/movement_all.ipynb)
+
 To better get a feeling for what information we could get from the data, I wanted to make a 3-dimensional visualization of the data by plotting it in a `plotly` 3D graph. Luckily, in a previous iteration of the project, a basic notebook existed for this. I wasn't happy with the notebook, because of the anchor sensor that was included and the fact that sensors weren't connected. I [changed the notebook](notebooks/movement_all.ipynb) so that the anchor is removed in the plot and the plot came out as a sort of 'stick figure'.
 
 This notebook has helped a lot when we were cleaning the data to remove the noise.
 
 ##### **Plotting rotational data** <!-- omit in toc -->
+[Notebook](notebooks/plot_rotational_data.ipynb)
+
 To better understand the rotational data, I wanted to plot each sensor's data in the 3D graphs described above. I wanted to have an arrow or something like an arrow pointing in the direction the rotation matrices described. I succeeded in plotting `plotly` cones in the directions, but later I realized we wouldn't really need these visualizations and I abandonded the [notebook](notebooks/plot_rotational_data.ipynb).
 
 #### **Regression model (and related) visualizations** <!-- omit in toc -->
+[Notebook](notebooks/visualize_factor.ipynb)
+
 The model created uses a simple method of temporarily removing individuals from the training data to fit a Logistic Regression model. It uses a single hyperparameter to separate the datapoints for `y=0` and `y=1`. The visualization for this separation can be found [here](notebooks/visualize_factor.ipynb). It includes the training (or loading results) of models for 20 intervals of the `factor` parameter in order to fetch the features that are included in the model. It then outputs distibution graphs for which of the datapoints are discarded/included for a certain factor.
 
 At the end of the project we realized some of the features we selected gave some inconsistent results when evaluating on the test set. This was due to the way we setup the [final experiment](notebooks/final_experiment.ipynb), we didn't scale our test set properly. So I created a method to visualize the regression models in a distribution graph. Later the scaling was fixed, and we had some nice visualizations for the Logistic Regression models like the one [I showed above](#logit-viz).
 
 #### **Visualization of velocity and acceleration** <!-- omit in toc -->
+[Notebook](notebooks/transform_data_velocities.ipynb)
+
 Two feature groups we wanted to explore were the velocity and accelaration of movements. We calculated the velocity by calculating the difference of positions over each frame, and the accelation by calculating the difference of velocities over each velocity frame. The notebook for visualizing these values can be found [here](notebooks/transform_data_velocities.ipynb). Note that half of the visualizations do not work anymore, as this notebook was created in an early stage of the project.
 
 
