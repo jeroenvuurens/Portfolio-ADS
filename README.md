@@ -140,22 +140,22 @@ At the start of the project we worked at the THUAS on wednesdays. Later, because
 Overall, I'm very happy with the way our team communicated and worked together. 
 
 Here I will reflect on a situation using STARR:
-### **** <!-- omit in toc -->
+### **Leading a retrospective** <!-- omit in toc -->
 
 #### Situation <!-- omit in toc -->
-
+At the end of a week, we always held a retrospective to reflect on our week. Not only to reflect on the work we had done, but also on the ambiance in the group. Every week we switch the leader of the retrospective.
 
 #### Task <!-- omit in toc -->
-
+Make sure the group fills their retrospective points in a serious way and the discussions following these points are done in an adult and serious manner.
 
 #### Action <!-- omit in toc -->
-
+Walk through the retrospective in a structured way. Let everyone fill out their positive and negative points to discuss later. Let everyone explain their points and make sure no one interupts. After everyone has done their explanation, discussion can be started about the points.
 
 #### Results <!-- omit in toc -->
-
+The retrospectives I led were sometimes more structured than the other. I feel like a strict retrospective is not per say necessary, as long as everyone can still follow the discussions.
 
 #### Reflection <!-- omit in toc -->
-
+Overall, I think the retrospectives I led were done quite well. I gave enough space for people to react on eachother. I also was active in these discussions and was able to solve conflicts when necessary.
 
 
 [Back to Table of Contents](#table-of-contents)
