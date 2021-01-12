@@ -1,6 +1,6 @@
 # Portfolio Minor Applied Data Science<!-- omit in toc -->
 ### Student name: Beau Fiechter<!-- omit in toc -->
-### Student number: 1415284<!-- omit in toc -->
+### Student number: 14152584<!-- omit in toc -->
 
 This document describes my progress, contributions and reflection of the OrthoEyes 2020 project, as well as background information about the project.
 
@@ -75,43 +75,52 @@ This document describes my progress, contributions and reflection of the OrthoEy
 ## Personal Reflection
 When I started with the project, part of the group was already a week in. This was due to me joining the group at a later time because there was a participation spot that came free when I started the other minor I was signed in for. This wasn't really a problem though, because I could easily catch up with the rest of the group.
 
-I didn't really have such a specific role in the group. I did act like a 'back-end engineer' together with Danny. Together we did most of the coding for the [convenience library](code/lib/ortho_lib.py) we put together. I also already had some experience in machine learning and neural networks, so at times (mostly at the beginning) I could provide some extra information when it was needed. We worked in a free form of agile development from week 3 or 4 on, so we divided tasks at the start of the week, and we just carried them out.
+I didn't really have a specific role in the group. I did act like a 'back-end engineer' together with Danny. Together we did most of the coding for the [convenience library](code/lib/ortho_lib.py) we put together. I also already had some experience in machine learning and neural networks, so at times (mostly at the beginning) I could provide some extra information when it was needed. We worked in a free form of agile development from week 3 or 4 on, so we divided tasks at the start of the week, and we just carried them out.
 
 Other tasks I worked on:
-- [A lot of visualization during the project]()
+- [Reconstructing the results from the original paper](notebooks/Reconstructie%20Paper%20Model.ipynb)
+- [A lot of visualization during the project](#visualization-and-further-exploration-of-the-data)
 - [Presentations](#presentations)
 - Feature selection
-- [Reconstructing the results from the original paper](notebooks/Reconstructie%20Paper%20Model.ipynb)
 - [Constructing the dichotomous classification tree](#dichotomous-tree-or-ensemble)
 - [Multinomial Logistic Regression](#multinomial-logistic-regression)
 - [Constructing the final experiment and results](notebooks/final_experiment.ipynb)
 - [Writing, but mostly reviewing, the paper](#paper)
 
+Here I will reflect on a situation using STARR:
+### **Updating the library to support more aggregation methods** <!-- omit in toc -->
+#### **Situation** <!-- omit in toc -->
+To generate more kinds features, an expansion of the `ortho_lib` library is needed. All sequence aggregation methods of the `pandas` `DataFrame` class should be supported. Currently, the only supported methods are `min()` and `max()`. The method should still support specifying for which exercise types the feature should be generated.
 
-### <a id="p-situation"></a>Situation <!-- omit in toc -->
+#### **Task** <!-- omit in toc -->
+To rewrite the `Patient` class to support all of the sequence aggregation methods.
 
-### <a id="p-task"></a>Task <!-- omit in toc -->
+#### **Action** <!-- omit in toc -->
+I rewrote the `Patient` class to have a new input structure, in which the basic feature name could be specified, together with the mathematical operations to aggregate the column values. The exercise types could be specified as well. I also made a change to the naming of the generated feature.
 
-### <a id="p-action"></a>Action <!-- omit in toc -->
+#### **Results** <!-- omit in toc -->
+With this relatively small change, a lot more kinds of features can be generated. Some of the existing notebooks will have to be changed a little to support this change. 
 
-### <a id="p-results"></a>Results <!-- omit in toc -->
-
-### <a id="p-reflection"></a>Reflection <!-- omit in toc -->
-
+#### **Reflection** <!-- omit in toc -->
+In this situation, I think I made a pretty large impact on the feature engineering part of the project. Where we could first only generate minimal and maximal column values through our library, we can now do any aggregation method. It has made it easy to generate large numbers of features, and I think that the group really profitted from this action, as it saves a lot of manual work.
 
 ## Personal Learning Objectives
-### <a id="p-situation"></a>Situation <!-- omit in toc -->
-### <a id="p-task"></a>Task <!-- omit in toc -->
-### <a id="p-action"></a>Action <!-- omit in toc -->
-### <a id="p-results"></a>Results <!-- omit in toc -->
-### <a id="p-reflection"></a>Reflection <!-- omit in toc -->
+For this minor I mainly wanted to expand my knowledge on machine learning and neural networks. I was really happy when I received the message that I could join the minor, even after it started, because this was my favorite choice of minor in the first place. I already had some knowledge on ML and NN through online articles I read and YouTube videos I watched. I also ported a so-called Intent Parser (parses an intent from a written sentence) called [padatious]() from Python to Java. This system used a simple neural network. I did learn a lot during this minor though. The intricacies of developing, using and evaluating a machine learning algorithm were not new to me, but I did gain in-depth knowledge and I learned to apply the different methods correctly. 
+
+I also learned more about programming in Python. I mainly program in Java, which is a lot more strict than Python, and PHP, but I did know a little Python beforehand. Through the Datacamp assignments I learned some of the intricacies of Python, like list comprehensions, and I can read and write Python code quite well now, if I say so myself. This is why Danny and me were very able to compile and expand the library we used to suite the needs of the group and the project and made running experiments a trivial task.
+
+### Situation <!-- omit in toc -->
+### Task <!-- omit in toc -->
+### Action <!-- omit in toc -->
+### Results <!-- omit in toc -->
+### Reflection <!-- omit in toc -->
 
 ## Evaluation of the group project
-### <a id="p-situation"></a>Situation <!-- omit in toc -->
-### <a id="p-task"></a>Task <!-- omit in toc -->
-### <a id="p-action"></a>Action <!-- omit in toc -->
-### <a id="p-results"></a>Results <!-- omit in toc -->
-### <a id="p-reflection"></a>Reflection <!-- omit in toc -->
+### Situation <!-- omit in toc -->
+### Task <!-- omit in toc -->
+### Action <!-- omit in toc -->
+### Results <!-- omit in toc -->
+### Reflection <!-- omit in toc -->
 
 [Back to Table of Contents](#table-of-contents)
 # 1. The Project
